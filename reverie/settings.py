@@ -121,6 +121,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
         'django.contrib.gis',
     'django_extensions',
+    'couchdbkit.ext.django',
     'core'
 )
 
@@ -147,6 +148,10 @@ LOGGING = {
     }
 }
 
+
+COUCHDB_DATABASES = (
+     ('core', 'http://127.0.0.1:5984/reverie'),
+)
 
 GDAL_LIBRARY_PATH = '/usr/local/lib/libgdal.so'
 GOOGLE_API_KEY = "AIzaSyBkynMsBYy7StUKQ6j6FFbYCXUCr4Ylfxk"
